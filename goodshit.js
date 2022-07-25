@@ -1754,9 +1754,5 @@ const addresses = ["0xFa19808C6b0257F3F3844697752353E470fA903C",
 "0x52413ca7a398c2eb9de79751881bcee2fe3b63f3"]
 
   const leaves = addresses.map(x => keccak256(x))
-  console.log(leaves);
   const tree = new MerkleTree(leaves, keccak256, { sortPairs: true })
-  console.log(tree);
   const buf2hex = x => '0x' + x.toString('hex')
-
-  console.log(buf2hex(tree.getRoot()));
